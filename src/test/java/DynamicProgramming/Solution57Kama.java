@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import java.util.Scanner;
 
-//
+// 爬楼梯（进阶版）
 public class Solution57Kama {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
