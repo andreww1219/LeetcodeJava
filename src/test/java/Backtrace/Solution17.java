@@ -1,8 +1,7 @@
-package Backtrack;
+package Backtrace;
 
 import org.junit.Test;
 
-import javax.swing.plaf.ToolBarUI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

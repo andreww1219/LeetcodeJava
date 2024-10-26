@@ -1,8 +1,7 @@
-package Backtrack;
+package Backtrace;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 // 组合

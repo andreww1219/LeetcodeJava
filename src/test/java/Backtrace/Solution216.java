@@ -1,8 +1,7 @@
-package Backtrack;
+package Backtrace;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PropertyResourceBundle;
 
 // 组合总和 III
 public class Solution216 {
