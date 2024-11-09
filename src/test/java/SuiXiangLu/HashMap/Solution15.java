@@ -22,7 +22,7 @@ public class Solution15 {
                     while(j < k && nums[j] == nums[j + 1])++j;
                     while(j < k && nums[k] == nums[k - 1])--k;
                     ++j;--k;
-                }else if (sum <  0){
+                }else if (sum < 0){
                     ++j;
                 }else{
                     --k;
