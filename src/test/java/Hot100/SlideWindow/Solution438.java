@@ -69,7 +69,7 @@ public class Solution438 {
             if (record[i] != 0) dif++;
         List<Integer> res = new ArrayList<>();
         if (dif == 0) res.add(0);
-        // 移动窗口
+        // 移动窗口 O(lenS - lenP)
         for (int i = lenP; i < lenS; ++i) {
             // 加入右边的字符
             int r = arrS[i] - 'a';
