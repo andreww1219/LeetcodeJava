@@ -11,9 +11,10 @@ public class Solution200 {
         {'1','1','0','1','0'},
         {'1','1','0','0','0'},
         {'0','0','0','0','0'}};
-        numIslands(grid);
+        numIslands1(grid);
     }
-    public int numIslands(char[][] grid) {
+    // 初见
+    public int numIslands1(char[][] grid) {
         // 将原矩阵围一圈'0'
         int rows = grid.length, cols = grid[0].length;
         char[][] extendedGrid = new char[rows + 2][cols + 2];
@@ -51,5 +52,29 @@ public class Solution200 {
         if (j - 1 >= 0 && grid[i][j - 1] == '1')
             dfs(grid, vis, i, j - 1);
         return 1;
+    }
+
+    // 岛屿问题板子解法
+    public int numIslands2(char[][] grid) {
+        int cnt = 0;
+        int rows = grid.length, cols = grid[0].length;
+        for (int i = 0; i < rows; ++i)
+            for (int j = 0; j < cols; ++j)
+                cnt += dfs(grid, i, j);
+        return cnt;
+    }
+    private int dfs(char[][] grid, int r, int c) {
+        if (!inArea(grid, r, c)) return 0;
+        if (grid[r][c] != '1') return 0;
+        grid[r][c] = '2';
+        dfs(grid, r + 1, c);
+        dfs(grid, r - 1, c);
+        dfs(grid, r, c + 1);
+        dfs(grid, r, c - 1);
+        return 1;
+    }
+    private boolean inArea(char[][] grid, int r, int c) {
+        return r >= 0 && r < grid.length
+                && c >= 0 && c < grid[0].length;
     }
 }
